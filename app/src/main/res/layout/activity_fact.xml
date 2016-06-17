@@ -4,30 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="justinzwick.chucknorrisfacts.FactActivity">
+    tools:context="justinzwick.chucknorrisfacts.FactActivity"
+    android:background="@color/colorPrimary">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView"
+        android:text="The text for the fact about Chuck Norris goes right here :)"
+        android:id="@+id/factText"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textSize="22sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView2"
-        android:layout_above="@+id/textView"
-        android:layout_centerHorizontal="true"/>
+        android:text="Did you know...?"
+        android:id="@+id/factLabel"
+        android:layout_above="@+id/factText"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#bbdefb"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
+        android:text="More Please"
+        android:id="@+id/nextFactButton"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="15dp"/>
 </RelativeLayout>
