@@ -19,7 +19,7 @@ import okhttp3.Response;
 
 public class FactActivity extends AppCompatActivity {
     private OkHttpClient client = new OkHttpClient();
-    private String mChuckData;
+    public String mChuckData;
     private TextView mFactText;
     private String mChuckFact;
     @Override
@@ -32,11 +32,8 @@ public class FactActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
-            setFact();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
+
 
     }
 
@@ -64,15 +61,28 @@ public class FactActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call call, final Response response) throws IOException {
                         mChuckData = response.body().string();
-
+                        Log.v("CheckData", mChuckData);
+                        JSONObject jsonObject = null;
+                        try {
+                            jsonObject = new JSONObject(mChuckData);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        try {
+                            mChuckFact = jsonObject.getString("value");
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mFactText.setText(mChuckFact);
+                            }
+                        });
                     }
                 });
     }
 
-    public void setFact() throws JSONException {
-        JSONObject jsonObject = new JSONObject(mChuckData);
-        mChuckFact = jsonObject.getString("value");
-    }
 }
 
 
