@@ -3,6 +3,7 @@ package justinzwick.chucknorrisfacts;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,16 @@ public class FactActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    doGetRequest("https://api.chucknorris.io/jokes/random");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     public void doGetRequest(String url) throws IOException{
