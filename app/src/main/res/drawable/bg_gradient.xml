@@ -7,8 +7,8 @@
         android:startColor="@color/colorPrimaryDark"
         android:endColor="@color/colorAccent"
         android:angle="270"
-        android:type="radial"
-        android:gradientRadius="600dp"
+        android:type="linear"
+
 
 
         />
