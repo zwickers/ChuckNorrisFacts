@@ -22,19 +22,18 @@ public class FactActivity extends AppCompatActivity {
     public String mChuckData;
     private TextView mFactText;
     private String mChuckFact;
+    private Button mButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fact);
         mFactText = (TextView) findViewById(R.id.factText);
+        mButton = (Button) findViewById(R.id.nextFactButton);
         try {
             doGetRequest("https://api.chucknorris.io/jokes/random");
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
     }
 
     public void doGetRequest(String url) throws IOException{
@@ -51,9 +50,7 @@ public class FactActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                // For the example, you can show an error dialog or a toast
-                                // on the main UI thread
-                                Toast.makeText(FactActivity.this, "there was an error", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(FactActivity.this, "There was an error", Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
@@ -82,7 +79,6 @@ public class FactActivity extends AppCompatActivity {
                     }
                 });
     }
-
 }
 
 
