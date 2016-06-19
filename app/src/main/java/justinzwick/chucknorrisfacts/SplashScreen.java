@@ -20,7 +20,7 @@ public class SplashScreen extends Activity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
-                /* Create an Intent that will start the Menu-Activity. */
+                /* Create an Intent that will start the FactActivity. */
                 Intent mainIntent = new Intent(SplashScreen.this,FactActivity.class);
                 SplashScreen.this.startActivity(mainIntent);
                 SplashScreen.this.finish();
