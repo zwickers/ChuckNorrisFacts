@@ -7,7 +7,7 @@ import android.os.Handler;
 public class SplashScreen extends Activity {
 
     /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 1000;
+    private final int SPLASH_DISPLAY_LENGTH = 2000;
 
     /** Called when the activity is first created. */
     @Override
@@ -15,7 +15,7 @@ public class SplashScreen extends Activity {
         super.onCreate(icicle);
         setContentView(R.layout.splashscreen);
 
-        /* New Handler to start the Menu-Activity
+        /* New Handler to start the FactActivity
          * and close this Splash-Screen after some seconds.*/
         new Handler().postDelayed(new Runnable(){
             @Override
