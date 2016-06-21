@@ -1,5 +1,6 @@
 package justinzwick.chucknorrisfacts;
 
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,8 @@ public class MenuActivity extends AppCompatActivity {
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DialogFragment ad = new AboutDialog();
+                ad.show(getFragmentManager().beginTransaction(),"ok");
             }
         });
 
