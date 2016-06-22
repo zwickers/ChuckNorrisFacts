@@ -46,6 +46,7 @@
         android:layout_above="@+id/aboutButton"
         android:layout_centerHorizontal="true"
         android:src="@mipmap/ic_launcher"
-        android:layout_marginBottom="70dp"/>
+        android:layout_marginBottom="70dp"
+        android:transitionName="logo"/>
 
 </RelativeLayout>

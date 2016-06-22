@@ -10,5 +10,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/logoImageView"
         android:layout_centerInParent="true"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@mipmap/ic_launcher"
+        android:transitionName="logo"/>
 </RelativeLayout>
