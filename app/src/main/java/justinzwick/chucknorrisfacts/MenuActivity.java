@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.ChangeImageTransform;
 import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
@@ -28,7 +29,8 @@ public class MenuActivity extends AppCompatActivity {
         aboutButton = (Button) findViewById(R.id.aboutButton);
         settingsButton = (Button) findViewById(R.id.settingsButton);
         startButton = (Button) findViewById(R.id.startButton);
-        getWindow().setExitTransition(null);
+        getWindow().setEnterTransition(new ChangeImageTransform());
+
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -31,7 +31,7 @@ public class FactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fact);
-        getWindow().setEnterTransition(new Fade());
+        getWindow().setEnterTransition(null);
         mFactText = (TextView) findViewById(R.id.factText);
         mButton = (Button) findViewById(R.id.nextFactButton);
         try {
