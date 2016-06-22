@@ -2,7 +2,10 @@ package justinzwick.chucknorrisfacts;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,6 +31,7 @@ public class FactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fact);
+        getWindow().setEnterTransition(new Fade());
         mFactText = (TextView) findViewById(R.id.factText);
         mButton = (Button) findViewById(R.id.nextFactButton);
         try {
