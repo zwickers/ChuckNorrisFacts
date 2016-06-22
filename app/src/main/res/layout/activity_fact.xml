@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="..."
+        android:text="...                     "
         android:id="@+id/factText"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
@@ -25,11 +25,12 @@
         android:layout_height="wrap_content"
         android:text="Did you know...?"
         android:id="@+id/factLabel"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:textColor="#bbdefb"
         android:layout_above="@+id/factText"
-        android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:layout_marginBottom="20dp"
-        android:textColor="#bbdefb"/>
+        android:layout_alignLeft="@+id/factText"
+        android:layout_alignStart="@+id/factText"/>
 
     <Button
         android:layout_width="140dp"
@@ -39,5 +40,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorPrimary"
-        android:layout_marginBottom="15dp"/>
+        android:layout_marginBottom="25dp"/>
 </RelativeLayout>
