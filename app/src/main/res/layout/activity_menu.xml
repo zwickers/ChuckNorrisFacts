@@ -14,7 +14,7 @@
 
     <Button
         android:layout_width="140dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="ABOUT"
         android:id="@+id/aboutButton"
         android:layout_centerVertical="true"
@@ -23,7 +23,7 @@
 
     <Button
         android:layout_width="140dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="SETTINGS"
         android:id="@+id/settingsButton"
         android:layout_below="@+id/aboutButton"
@@ -32,7 +32,7 @@
 
     <Button
         android:layout_width="140dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="GO!"
         android:id="@+id/startButton"
         android:layout_below="@+id/settingsButton"
