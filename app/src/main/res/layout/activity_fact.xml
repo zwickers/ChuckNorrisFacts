@@ -32,8 +32,8 @@
         android:textColor="#bbdefb"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
         android:text="More Please"
         android:id="@+id/nextFactButton"
         android:layout_alignParentBottom="true"
