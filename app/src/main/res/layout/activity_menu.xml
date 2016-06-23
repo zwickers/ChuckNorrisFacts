@@ -12,31 +12,37 @@
     android:background="@drawable/bg_gradient">
 
 
-    <Button
+    <com.gc.materialdesign.views.ButtonRectangle
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:text="ABOUT"
         android:id="@+id/aboutButton"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+
+        android:background="#dddddd"
         />
 
-    <Button
+    <com.gc.materialdesign.views.ButtonRectangle
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:text="SETTINGS"
         android:id="@+id/settingsButton"
         android:layout_below="@+id/aboutButton"
+
         android:layout_centerHorizontal="true"
+        android:background="#dddddd"
         android:layout_marginTop="40dp"/>
 
-    <Button
+    <com.gc.materialdesign.views.ButtonRectangle
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:text="GO!"
         android:id="@+id/startButton"
         android:layout_below="@+id/settingsButton"
         android:layout_centerHorizontal="true"
+        android:background="#dddddd"
+
         android:layout_marginTop="40dp"/>
 
     <ImageView

@@ -4,6 +4,7 @@ import android.app.ActivityOptions;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.ChangeImageTransform;
@@ -18,7 +19,7 @@ import android.widget.ImageView;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button aboutButton, settingsButton, startButton;
+    private com.gc.materialdesign.views.ButtonRectangle aboutButton, settingsButton, startButton;
     private ImageView mImageView;
 
 
@@ -26,10 +27,10 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        aboutButton = (Button) findViewById(R.id.aboutButton);
-        settingsButton = (Button) findViewById(R.id.settingsButton);
-        startButton = (Button) findViewById(R.id.startButton);
         getWindow().setEnterTransition(new ChangeImageTransform());
+        aboutButton = (com.gc.materialdesign.views.ButtonRectangle) findViewById(R.id.aboutButton);
+        settingsButton = (com.gc.materialdesign.views.ButtonRectangle) findViewById(R.id.settingsButton);
+        startButton = (com.gc.materialdesign.views.ButtonRectangle) findViewById(R.id.startButton);
 
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
