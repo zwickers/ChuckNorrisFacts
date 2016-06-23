@@ -1,25 +1,21 @@
 package justinzwick.chucknorrisfacts;
 
 import android.app.ActivityOptions;
-import android.app.DialogFragment;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.transition.ChangeImageTransform;
-import android.transition.Explode;
-import android.transition.Fade;
-import android.transition.Slide;
-import android.view.Gravity;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageView;
+
+import com.gc.materialdesign.views.ButtonFlat;
+import com.gc.materialdesign.views.ButtonRectangle;
+import com.gc.materialdesign.widgets.ColorSelector;
+import com.gc.materialdesign.widgets.Dialog;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private com.gc.materialdesign.views.ButtonRectangle aboutButton, settingsButton, startButton;
+    private ButtonRectangle aboutButton, settingsButton, startButton;
     private ImageView mImageView;
 
 
@@ -28,21 +24,24 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         getWindow().setEnterTransition(new ChangeImageTransform());
-        aboutButton = (com.gc.materialdesign.views.ButtonRectangle) findViewById(R.id.aboutButton);
-        settingsButton = (com.gc.materialdesign.views.ButtonRectangle) findViewById(R.id.settingsButton);
-        startButton = (com.gc.materialdesign.views.ButtonRectangle) findViewById(R.id.startButton);
+        aboutButton = (ButtonRectangle) findViewById(R.id.aboutButton);
+        settingsButton = (ButtonRectangle) findViewById(R.id.settingsButton);
+        startButton = (ButtonRectangle) findViewById(R.id.startButton);
 
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment ad = new AboutDialog();
-                ad.show(getFragmentManager().beginTransaction(),"ok");
+                Dialog dialog = new Dialog(MenuActivity.this,"About:", "This app gives 100% truthful facts about Chuck Norris. Enjoy!");
+                dialog.show();
+                ButtonFlat acceptButton = dialog.getButtonAccept();
+                acceptButton.setText("OK");
             }
         });
 
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
             }
         });
 
