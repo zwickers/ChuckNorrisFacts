@@ -33,7 +33,7 @@
         android:layout_alignLeft="@+id/factText"
         android:layout_alignStart="@+id/factText"/>
 
-    <Button
+    <com.gc.materialdesign.views.ButtonRectangle
         android:layout_width="140dp"
         android:layout_height="60dp"
         android:text="More Please"
@@ -41,7 +41,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textColor="@color/colorPrimary"
-        android:layout_marginBottom="25dp"/>
+        android:layout_marginBottom="25dp"
+        android:background="#DDDDDD"/>
 
     <com.gc.materialdesign.views.ButtonFloat
         android:id="@+id/buttonFloat"

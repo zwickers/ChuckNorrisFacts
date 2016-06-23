@@ -26,14 +26,14 @@ public class FactActivity extends AppCompatActivity {
     public String mChuckData;
     private TextView mFactText;
     private String mChuckFact;
-    private Button mButton;
+    private com.gc.materialdesign.views.ButtonRectangle mButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fact);
         getWindow().setEnterTransition(null);
         mFactText = (TextView) findViewById(R.id.factText);
-        mButton = (Button) findViewById(R.id.nextFactButton);
+        mButton = (com.gc.materialdesign.views.ButtonRectangle) findViewById(R.id.nextFactButton);
         try {
             doGetRequest("https://api.chucknorris.io/jokes/random");
         } catch (IOException e) {
